@@ -1,6 +1,4 @@
 # Fall 2017 OOP345 Assignments
-
-## Purpose
 The purpose of OOP345 assignments is to model relationships between classes using containers, inheritance hierarchies and polymorphism in the C++ programming language and to write program that execute on multiple threads.
 
 ## Getting Started
