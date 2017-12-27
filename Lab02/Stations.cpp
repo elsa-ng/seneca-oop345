@@ -1,3 +1,13 @@
+/*****************************************
+** Name: Wai Chi Ng						**
+** Student ID: 140634163				**
+** Email: wcng1@myseneca.ca				**
+** Date: September 18, 2017				**
+** OOP345 Section C - Workshop 2		**
+** Stations.cpp							**
+*****************************************/
+
+
 #define _CRT_SECURE_NO_WARNINGS
 
 #include <iostream>
