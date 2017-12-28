@@ -7,9 +7,9 @@
 ** w3.cpp								**
 *****************************************/
 
+#include <utility>
 #include <iostream>
 #include <iomanip>
-#include <utility>
 #include <ctime>
 #include "Text.h"
 #define TIME(start, end) double((end) - (start)) / CLOCKS_PER_SEC
@@ -55,7 +55,7 @@ int main(int argc, char* argv[]) {
 		ce = std::clock();
 		std::cout << "Copy Constructor " << TIME(cs, ce) << " seconds";
 		std::cout << " - c.size = " << c.size() << std::endl;
-
+	
 		cs = std::clock();
 		w3::Text d = std::move(a);
 		ce = std::clock();
