@@ -16,7 +16,7 @@ namespace w2 {
 	class Stations {
 		std::string filename;
 		unsigned int noStations;
-		Station* StationManager = nullptr;
+		Station* StationManager;
 	public:
 		Stations();
 		Stations(char* filename);

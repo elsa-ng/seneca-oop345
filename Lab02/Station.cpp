@@ -60,11 +60,11 @@ namespace w2 {
 	void Station::report() {
 		std::cout << std::setw(19) << std::left << getName()
 			<< std::setw(6) << std::right << inStock(PASS_STUDENT)
-			<< std::setw(6) << std::right << inStock(PASS_ADULT) << std::endl;
+			<< std::setw(6) << std::right << inStock(PASS_ADULT) << "\n";
 	}
 
 	void Station::write(std::ostream& os) {
-		os << getName() << ";" << inStock(PASS_STUDENT) << " " << inStock(PASS_ADULT) << std::endl;
+		os << getName() << ";" << inStock(PASS_STUDENT) << " " << inStock(PASS_ADULT) << "\n";
 	}
 
 	unsigned Station::inStock(PassType pt) {

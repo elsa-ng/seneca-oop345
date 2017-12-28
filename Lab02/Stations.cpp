@@ -16,7 +16,9 @@
 #include "Stations.h"
 
 namespace w2 {
-	Stations::Stations() {}
+	Stations::Stations() {
+		StationManager = nullptr;
+	}
 
 	Stations::Stations(char* file) {
 		filename = std::string(file);
@@ -58,7 +60,7 @@ namespace w2 {
 				index++;
 			}
 
-			if (index < line.size()) {
+			if (line[index] != '\n' && index < line.size()) {
 				std::cerr << "extra characters after delimit character '" << d << "' on line -->" << line << "<--" << std::endl;
 				exit(13);
 			}
