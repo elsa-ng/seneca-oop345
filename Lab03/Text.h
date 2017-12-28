@@ -13,14 +13,15 @@
 
 namespace w3 {
 	class Text {
+		size_t count;
 		std::string* sArray;
 	public:
 		Text();									// default constructor
 		Text(const std::string &filename);		// overloaded constructor
 		Text(const Text& t);					// copy constructor
 		Text& operator=(const Text& t);			// copy assignment operator
-		Text(const Text&& t);					// move constructor
-		Text&& operator=(const Text&& t);		// move assignment operator
+		Text(Text&& t);							// move constructor
+		Text&& operator=(Text&& t);				// move assignment operator
 		~Text();								// destructor
 		size_t size() const;					// member function that returns the number of records of text data
 	}; // class Text
