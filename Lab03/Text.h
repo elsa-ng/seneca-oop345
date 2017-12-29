@@ -13,8 +13,8 @@
 
 namespace w3 {
 	class Text {
-		size_t count = 0;
-		std::string* sArray = nullptr;
+		size_t count = 0;						// C++14
+		std::string* sArray = nullptr;			// C++14
 	public:
 		Text();									// default constructor
 		Text(char* filename);					// overloaded constructor
