@@ -1,3 +1,12 @@
+/*****************************************
+** Name: Wai Chi Ng						**
+** Student ID: 140634163				**
+** Email: wcng1@myseneca.ca				**
+** Date: September 27, 2017				**
+** OOP345 Section C - Workshop 4		**
+** w4.cpp								**
+*****************************************/
+
 // Workshop 4 - Templates
 // w4.cpp
 
