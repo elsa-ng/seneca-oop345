@@ -56,6 +56,12 @@ public:
 		}	
 	} // overloaded constructor
 
+	// prohibits copying, moving or assigning of a Grades object according to workshop instruction
+	Grades(const Grades& g) = delete;				
+	Grades& operator=(const Grades& g) = delete;
+	Grades(Grades&& g) = delete;
+	Grades&& operator=(const Grades&& g) = delete;
+
 	void displayGrades(std::ostream& os, std::function<std::string(double)>g) {
 		std::vector<std::string>::iterator innerV;
 		std::vector<std::vector<std::string>>::iterator outerV;
