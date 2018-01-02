@@ -27,8 +27,9 @@ w9::List<w9::Product> merge(const w9::List<w9::Description>& desc,
 	for (unsigned i = 0; i < desc.size(); i++) {
 		for (unsigned k = 0; k < price.size(); k++) {
 			if (desc[i].code == price[k].code) {
-				w9::Product* pl = new w9::Product(desc[i].desc, price[k].price);
-				priceList += pl;
+				std::unique_ptr<w9::Product> pl(new w9::Product(desc[i].desc, price[k].price));
+				pl->validate();
+				priceList += std::move(pl);
 			}
 		}	
 	}
