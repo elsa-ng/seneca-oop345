@@ -17,6 +17,7 @@
 #include <vector>
 #include <string>
 #include <fstream>
+#include <memory>
 
 namespace w9 {
 	template <typename T>
@@ -24,6 +25,7 @@ namespace w9 {
 		std::vector<T> list;
 	public:
 		List() { }
+		
 		List(const char* fn) {
 			std::ifstream file(fn);
 			if (!file)
@@ -36,10 +38,13 @@ namespace w9 {
 			}
 		}
 		size_t size() const { return list.size(); }
+		
 		const T& operator[](size_t i) const { return list[i]; }
-		void operator+=(T* p) {
-			list.push_back(*p);
+		
+		void operator+=(std::unique_ptr<T> p) {
+			list.push_back(std::move(*p));
 		}
+		
 		void display(std::ostream& os) const {
 			os << std::fixed << std::setprecision(2);
 			for (auto& e : list)
